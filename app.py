@@ -16,7 +16,7 @@ api = Api(app)
 class HelloWorld(Resource):
     def get(self):
         return {'hello': 'world'}
-
+    
 """
     @method POST
     @desc Login Endpoint for login by username
