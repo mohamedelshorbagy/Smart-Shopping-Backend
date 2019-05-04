@@ -20,7 +20,7 @@ c,conn = connection()
     @returns {Dictionary}
 """
 def readByCode(code):
-    c.execute("SELECT * FROM products WHERE code='{}'".format(code))
+    c.execute("SELECT * FROM Products WHERE code='{}'".format(code))
     fields = [field[0] for field in c.description] # List Comprehinsion
     data = c.fetchone()
     dictresult = {}
@@ -52,6 +52,6 @@ def readByProductName(name):
 
 def insertBarCodes(barcodes):
     for barcode in barcodes:
-        c.execute("INSERT INTO products(code) VALUES ('{}')".format(barcode))
+        c.execute("INSERT INTO Products(code) VALUES ('{}')".format(barcode))
         conn.commit()
     return 'done'
