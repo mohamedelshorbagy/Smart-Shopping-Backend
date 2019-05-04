@@ -1,10 +1,9 @@
 import MySQLdb
-import mysql.connector
 
 def connection():
     conn = MySQLdb.connect(host="localhost",
                            user = "root",
-                           passwd = "",
+                           passwd = "root",
                            db = "smartShopping")
     c = conn.cursor()
 
