@@ -1,4 +1,4 @@
-import pymysql as MySQLdb
+import MySQLdb
 import mysql.connector
 
 """
